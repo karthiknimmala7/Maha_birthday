@@ -1,0 +1,1992 @@
+/* ============================================================
+                    GENERAL PAGE ANIMATIONS
+============================================================ */
+
+.page.active{
+    animation:fadePage .8s ease;
+}
+
+.page.exit{
+    animation:fadeOut .5s ease forwards;
+}
+
+@keyframes fadePage{
+
+    from{
+        opacity:0;
+        transform:scale(1.05);
+        filter:blur(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+        filter:blur(0);
+    }
+}
+
+@keyframes fadeOut{
+
+    from{
+        opacity:1;
+        transform:scale(1);
+    }
+
+    to{
+        opacity:0;
+        transform:scale(.95);
+    }
+}
+
+
+/* ============================================================
+                    LOADING ANIMATIONS
+============================================================ */
+
+@keyframes loadingBar{
+
+    from{
+        width:0;
+    }
+
+    to{
+        width:100%;
+    }
+}
+
+#hearts,
+#sparkles,
+#petals{
+
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+}
+
+.heart,
+.sparkle,
+.petal{
+
+    position:absolute;
+    bottom:-60px;
+
+    animation:
+        floatUp
+        linear
+        forwards;
+}
+
+@keyframes floatUp{
+
+    from{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+
+/* ============================================================
+                    STARS & PETALS
+============================================================ */
+
+#stars,
+#countPetals{
+
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+}
+
+.star{
+
+    position:absolute;
+
+    width:4px;
+    height:4px;
+
+    border-radius:50%;
+
+    background:white;
+
+    animation:
+        twinkle
+        2s
+        infinite;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:.2;
+    }
+
+    50%{
+        opacity:1;
+    }
+}
+
+
+/* ============================================================
+                    WELCOME ANIMATIONS
+============================================================ */
+
+.welcome-content{
+
+    animation:
+        welcomeFade
+        1.2s
+        ease;
+}
+
+@keyframes welcomeFade{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* ============================================================
+                    GENERAL BOOK ANIMATION
+============================================================ */
+
+.book{
+
+    animation:
+        bookOpen
+        1.4s
+        ease;
+}
+
+@keyframes bookOpen{
+
+    from{
+        transform:rotateY(-90deg);
+        opacity:0;
+    }
+
+    to{
+        transform:rotateY(0);
+        opacity:1;
+    }
+}
+
+.story-title{
+
+    animation:
+        fadeInDown
+        1.5s
+        ease;
+}
+
+.story-text{
+
+    animation:
+        fadeInUp
+        2s
+        ease;
+}
+
+@keyframes fadeInDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeInUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* ============================================================
+                    STORY PAGE ANIMATIONS
+============================================================ */
+
+.story-book{
+
+    animation:
+        storyBookOpen
+        1.2s
+        ease;
+
+    transform-origin:center;
+}
+
+@keyframes storyBookOpen{
+
+    from{
+        opacity:0;
+        transform:
+            scale(.8)
+            rotateY(-25deg);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            scale(1)
+            rotateY(0);
+    }
+}
+
+.polaroid{
+
+    animation:
+        photoPop
+        1.6s
+        ease;
+}
+
+@keyframes photoPop{
+
+    0%{
+        opacity:0;
+        transform:
+            translateY(80px)
+            rotate(-20deg);
+    }
+
+    100%{
+        opacity:1;
+        transform:
+            translateY(0)
+            rotate(-6deg);
+    }
+}
+
+.story-heading{
+
+    animation:
+        titleFade
+        1.5s
+        ease;
+}
+
+@keyframes titleFade{
+
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.story-lines p{
+
+    opacity:0;
+
+    animation:
+        fadeLine
+        .8s
+        forwards;
+}
+
+.story-lines p:nth-child(1){
+    animation-delay:.5s;
+}
+
+.story-lines p:nth-child(2){
+    animation-delay:1.2s;
+}
+
+.story-lines p:nth-child(3){
+    animation-delay:1.9s;
+}
+
+.story-lines p:nth-child(4){
+    animation-delay:2.6s;
+}
+
+.story-lines p:nth-child(5){
+    animation-delay:3.3s;
+}
+
+.story-lines p:nth-child(6){
+    animation-delay:4s;
+}
+
+@keyframes fadeLine{
+
+    from{
+        opacity:0;
+        transform:translateX(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+#storyNext{
+
+    animation:
+        buttonAppear
+        5s
+        forwards;
+
+    opacity:0;
+}
+
+@keyframes buttonAppear{
+
+    0%,85%{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* ============================================================
+                 GALLERY NATURAL ANIMATIONS
+============================================================ */
+
+
+/* ============================================================
+                       COVER OPENING
+============================================================ */
+
+.memory-cover.open-memory-cover {
+    animation:
+        realisticCoverOpen
+        1.55s
+        cubic-bezier(.72,.02,.18,1)
+        forwards;
+}
+
+
+@keyframes realisticCoverOpen {
+
+    0% {
+        transform:
+            rotateY(0deg)
+            translateZ(0);
+
+        box-shadow:
+            inset 0 0 0 7px rgba(38,8,19,.28),
+            0 22px 45px rgba(52,18,31,.35);
+    }
+
+    18% {
+        transform:
+            rotateY(-18deg)
+            translateZ(7px);
+    }
+
+    42% {
+        transform:
+            rotateY(-65deg)
+            translateZ(15px);
+
+        box-shadow:
+            20px 20px 30px rgba(52,18,31,.23);
+    }
+
+    67% {
+        transform:
+            rotateY(-125deg)
+            translateZ(12px);
+
+        box-shadow:
+            12px 15px 25px rgba(52,18,31,.15);
+    }
+
+    88% {
+        transform:
+            rotateY(-169deg)
+            translateZ(4px);
+    }
+
+    100% {
+        transform:
+            rotateY(-180deg)
+            translateZ(0);
+
+        visibility:hidden;
+
+        pointer-events:none;
+    }
+}
+
+
+/* ============================================================
+                     FIRST PAGE APPEAR
+============================================================ */
+
+.memory-page.memory-page-visible {
+    animation:
+        pageAppear
+        .65s
+        ease-out
+        forwards;
+}
+
+
+@keyframes pageAppear {
+
+    from {
+        opacity:0;
+
+        transform:
+            translateX(5px)
+            scale(.997);
+    }
+
+    to {
+        opacity:1;
+
+        transform:
+            translateX(0)
+            scale(1);
+    }
+}
+
+
+/* ============================================================
+                     REALISTIC PAGE TURN
+============================================================ */
+
+.memory-page.turning-forward {
+
+    z-index:20;
+
+    animation:
+        physicalPageTurn
+        1.32s
+        cubic-bezier(.64,0,.36,1)
+        forwards;
+}
+
+
+@keyframes physicalPageTurn {
+
+    0% {
+
+        transform:
+            rotateY(0deg)
+            translateZ(0);
+
+        box-shadow:
+            0 0 0 rgba(45,22,25,0);
+    }
+
+
+    10% {
+
+        transform:
+            rotateY(-9deg)
+            translateZ(3px);
+
+        box-shadow:
+            7px 5px 14px rgba(45,22,25,.10);
+    }
+
+
+    25% {
+
+        transform:
+            rotateY(-35deg)
+            translateZ(8px);
+
+        box-shadow:
+            16px 8px 23px rgba(45,22,25,.17);
+    }
+
+
+    43% {
+
+        transform:
+            rotateY(-72deg)
+            translateZ(13px);
+
+        box-shadow:
+            24px 10px 30px rgba(45,22,25,.22);
+    }
+
+
+    50% {
+
+        transform:
+            rotateY(-90deg)
+            translateZ(15px);
+
+        box-shadow:
+            27px 10px 33px rgba(45,22,25,.25);
+    }
+
+
+    65% {
+
+        transform:
+            rotateY(-119deg)
+            translateZ(12px);
+
+        box-shadow:
+            22px 8px 27px rgba(45,22,25,.19);
+    }
+
+
+    82% {
+
+        transform:
+            rotateY(-153deg)
+            translateZ(7px);
+
+        box-shadow:
+            13px 6px 18px rgba(45,22,25,.12);
+    }
+
+
+    94% {
+
+        transform:
+            rotateY(-173deg)
+            translateZ(2px);
+
+        box-shadow:
+            5px 3px 10px rgba(45,22,25,.07);
+    }
+
+
+    100% {
+
+        transform:
+            rotateY(-180deg)
+            translateZ(0);
+
+        box-shadow:
+            0 0 0 rgba(45,22,25,0);
+    }
+}
+
+
+/* ============================================================
+                    PAGE CONTENT ENTRANCE
+============================================================ */
+
+.memory-page.content-enter
+.memory-polaroid {
+
+    animation:
+        polaroidEnter
+        .72s
+        cubic-bezier(.2,.8,.2,1)
+        both;
+}
+
+
+@keyframes polaroidEnter {
+
+    0% {
+        opacity:0;
+
+        transform:
+            translateY(-15px)
+            rotate(3.2deg);
+    }
+
+    65% {
+
+        opacity:1;
+
+        transform:
+            translateY(3px)
+            rotate(2.6deg);
+    }
+
+    100% {
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            rotate(3.2deg);
+    }
+}
+
+
+.memory-page.content-enter
+.memory-heading {
+
+    animation:
+        headingEnter
+        .6s
+        ease
+        .45s
+        both;
+}
+
+
+@keyframes headingEnter {
+
+    from {
+        opacity:0;
+
+        transform:
+            translateY(8px);
+    }
+
+    to {
+        opacity:1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* ============================================================
+                         CURSOR
+============================================================ */
+
+.memory-cursor.active {
+
+    animation:
+        typingCursor
+        .72s
+        steps(1)
+        infinite;
+}
+
+
+@keyframes typingCursor {
+
+    0%,
+    48% {
+        opacity:1;
+    }
+
+    49%,
+    100% {
+        opacity:0;
+    }
+}
+
+
+/* ============================================================
+                    VIDEO APPEARANCE
+============================================================ */
+
+.memory-page.video-enter
+.memory-video-polaroid {
+
+    animation:
+        videoMemoryEnter
+        .8s
+        cubic-bezier(.2,.8,.2,1)
+        both;
+}
+
+
+@keyframes videoMemoryEnter {
+
+    from {
+
+        opacity:0;
+
+        transform:
+            translateY(15px)
+            rotate(2deg)
+            scale(.97);
+    }
+
+    to {
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            rotate(1deg)
+            scale(1);
+    }
+}
+
+
+/* ============================================================
+                    LETTER BUTTON
+============================================================ */
+
+.memory-letter-button.show {
+
+    animation:
+        letterButtonEnter
+        .55s
+        ease
+        forwards;
+}
+
+
+@keyframes letterButtonEnter {
+
+    from {
+
+        opacity:0;
+
+        transform:
+            translateY(8px);
+    }
+
+    to {
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* ============================================================
+                        HEARTS
+============================================================ */
+
+.gallery-heart {
+
+    animation:
+        galleryHeartFloat
+        var(--duration)
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes galleryHeartFloat {
+
+    0% {
+
+        transform:
+            translateY(30px)
+            rotate(-5deg);
+
+        opacity:0;
+    }
+
+    15% {
+        opacity:.35;
+    }
+
+    50% {
+
+        transform:
+            translateY(-25px)
+            rotate(6deg);
+
+        opacity:.5;
+    }
+
+    85% {
+        opacity:.25;
+    }
+
+    100% {
+
+        transform:
+            translateY(-70px)
+            rotate(-4deg);
+
+        opacity:0;
+    }
+}
+
+
+/* ============================================================
+                       SPARKLES
+============================================================ */
+
+.gallery-sparkle {
+
+    animation:
+        gallerySparkle
+        var(--duration)
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes gallerySparkle {
+
+    0%,
+    100% {
+
+        opacity:.12;
+
+        transform:scale(.55);
+    }
+
+    50% {
+
+        opacity:.75;
+
+        transform:scale(1);
+    }
+}
+
+
+/* ============================================================
+                         PETALS
+============================================================ */
+
+.gallery-petal {
+
+    animation:
+        galleryPetalFall
+        var(--duration)
+        linear
+        infinite;
+}
+
+
+@keyframes galleryPetalFall {
+
+    0% {
+
+        transform:
+            translate3d(0,-20px,0)
+            rotate(0deg);
+
+        opacity:0;
+    }
+
+    12% {
+        opacity:.35;
+    }
+
+    50% {
+
+        transform:
+            translate3d(
+                var(--drift),
+                50vh,
+                0
+            )
+            rotate(140deg);
+    }
+
+    90% {
+        opacity:.25;
+    }
+
+    100% {
+
+        transform:
+            translate3d(
+                calc(var(--drift) * -.4),
+                105vh,
+                0
+            )
+            rotate(280deg);
+
+        opacity:0;
+    }
+}
+
+
+/* ============================================================
+                     REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion:reduce) {
+
+    .memory-cover,
+    .memory-page,
+    .memory-polaroid,
+    .gallery-heart,
+    .gallery-sparkle,
+    .gallery-petal {
+
+        animation:none !important;
+
+        transition:none !important;
+    }
+}
+/* =========================================================
+   LETTER ANIMATIONS
+   ========================================================= */
+
+
+/* =========================================================
+   TYPING CURSOR
+   ========================================================= */
+
+@keyframes letterCursorBlink {
+
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   PAPER ENTRANCE
+   ========================================================= */
+
+.letter-paper {
+    animation:
+        letterPaperEntrance 0.8s ease-out both;
+}
+
+@keyframes letterPaperEntrance {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(15px)
+            rotate(-0.35deg)
+            scale(0.985);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            rotate(-0.35deg)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   SIGNATURE
+   ========================================================= */
+
+.letter-signature.show {
+    animation:
+        letterSignatureAppear 0.55s ease forwards;
+}
+
+@keyframes letterSignatureAppear {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(6px);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   CONTINUE BUTTON
+   ========================================================= */
+
+.letter-next-button.show {
+    animation:
+        letterButtonAppear 0.55s ease forwards;
+}
+
+@keyframes letterButtonAppear {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(-50%)
+            translateX(12px)
+            scale(0.96);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(-50%)
+            translateX(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+   ========================================================= */
+
+.letter-next-button {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.letter-next-button.show:hover {
+    transform:
+        translateY(-50%)
+        translateX(0)
+        scale(1.03);
+
+    box-shadow:
+        0 10px 22px rgba(137, 48, 77, 0.32);
+}
+
+/* =========================================================
+   MOBILE BUTTON ANIMATION
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .letter-next-button.show {
+        animation:
+            letterMobileButtonAppear 0.5s ease forwards;
+    }
+
+    @keyframes letterMobileButtonAppear {
+
+        0% {
+            opacity: 0;
+
+            transform:
+                translateY(8px)
+                scale(0.96);
+        }
+
+        100% {
+            opacity: 1;
+
+            transform:
+                translateY(0)
+                scale(1);
+        }
+    }
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+   ========================================================= */
+
+.letter-heart {
+    animation:
+        letterHeartFloat 7s linear forwards;
+}
+
+@keyframes letterHeartFloat {
+
+    0% {
+        transform:
+            translateY(20px)
+            scale(0.8)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.65;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            scale(1.1)
+            rotate(20deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   FLOATING ROSES
+   ========================================================= */
+
+.letter-rose {
+    animation:
+        letterRoseFloat 9s linear forwards;
+}
+
+@keyframes letterRoseFloat {
+
+    0% {
+        transform:
+            translateY(30px)
+            rotate(-10deg)
+            scale(0.8);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.60;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(20deg)
+            scale(1.05);
+
+        opacity: 0;
+    }
+}
+/* =========================================================
+                     TIMELINE ANIMATIONS
+========================================================= */
+
+#timeline.active .timeline-header {
+    animation:
+        timelineHeaderReveal
+        0.8s
+        ease
+        both;
+}
+
+
+#timeline.active .timeline-item {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    animation:
+        timelineItemReveal
+        0.7s
+        ease
+        forwards;
+}
+
+
+#timeline.active .timeline-item:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+
+#timeline.active .timeline-item:nth-child(3) {
+    animation-delay: 0.30s;
+}
+
+
+#timeline.active .timeline-item:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+
+#timeline.active .timeline-item:nth-child(5) {
+    animation-delay: 0.60s;
+}
+
+
+@keyframes timelineHeaderReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes timelineItemReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+.timeline-next-button.show {
+    animation:
+        timelineButtonAppear
+        0.6s
+        ease
+        forwards;
+}
+
+
+@keyframes timelineButtonAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes timelineHeartFloat {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(0)
+            scale(0.8);
+    }
+
+    10% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translateY(-110vh)
+            translateX(40px)
+            scale(1.15);
+    }
+}
+
+
+@keyframes timelineRoseFloat {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translateY(-110vh)
+            translateX(-40px)
+            rotate(180deg);
+    }
+}
+/* =========================================================
+                       REASONS ANIMATIONS
+========================================================= */
+
+
+/* =========================================================
+                     REASON REVEAL
+========================================================= */
+
+#reasons.active .reason-item {
+
+    opacity: 0;
+
+    transform:
+        translateY(22px);
+
+    animation:
+        reasonReveal
+        0.65s
+        ease
+        forwards;
+}
+
+
+#reasons.active .reason-item:nth-child(1) {
+    animation-delay: 0.12s;
+}
+
+
+#reasons.active .reason-item:nth-child(2) {
+    animation-delay: 0.24s;
+}
+
+
+#reasons.active .reason-item:nth-child(3) {
+    animation-delay: 0.36s;
+}
+
+
+#reasons.active .reason-item:nth-child(4) {
+    animation-delay: 0.48s;
+}
+
+
+#reasons.active .reason-item:nth-child(5) {
+    animation-delay: 0.60s;
+}
+
+
+@keyframes reasonReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+                    HEADER ENTRANCE
+========================================================= */
+
+#reasons.active .reasons-header {
+
+    animation:
+        reasonsHeaderReveal
+        0.8s
+        ease
+        both;
+}
+
+
+@keyframes reasonsHeaderReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+                    BUTTON ENTRANCE
+========================================================= */
+
+.reasons-next-button.show {
+
+    animation:
+        reasonsButtonAppear
+        0.6s
+        ease
+        forwards;
+}
+
+
+@keyframes reasonsButtonAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+                    FLOATING HEARTS
+========================================================= */
+
+@keyframes reasonHeartFloat {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(0)
+            translateX(0)
+            scale(0.75);
+    }
+
+    10% {
+        opacity: 0.75;
+    }
+
+    50% {
+        opacity: 0.55;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translateY(-110vh)
+            translateX(35px)
+            scale(1.1);
+    }
+}
+
+
+/* =========================================================
+                    FLOATING ROSES
+========================================================= */
+
+@keyframes reasonRoseFloat {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(0)
+            translateX(0)
+            rotate(0deg);
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translateY(-110vh)
+            translateX(-35px)
+            rotate(180deg);
+    }
+}
+/* =========================================================
+                    GAME ANIMATIONS
+========================================================= */
+
+@keyframes gameScreenEnter {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.98);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes gameOptionAppear {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+.birthday-option,
+.random-question-option {
+
+    animation:
+        gameOptionAppear
+        0.45s
+        ease
+        both;
+
+}
+
+
+.birthday-option:nth-child(1),
+.random-question-option:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.birthday-option:nth-child(2),
+.random-question-option:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.birthday-option:nth-child(3),
+.random-question-option:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.birthday-option:nth-child(4),
+.random-question-option:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.random-question-option:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+
+@keyframes resultHeartBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+}
+
+
+@keyframes gameHeartFloat {
+
+    0% {
+        transform:
+            translateY(100vh)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.65;
+    }
+
+    100% {
+        transform:
+            translateY(-120px)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+@keyframes gameRoseFloat {
+
+    0% {
+        transform:
+            translateY(100vh)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform:
+            translateY(-120px)
+            rotate(180deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+.game-option-selected {
+    animation:
+        selectedOption
+        0.45s
+        ease
+        both;
+}
+
+
+@keyframes selectedOption {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+/* =========================================================
+                  FINAL PAGE ANIMATIONS
+========================================================= */
+
+@keyframes finalScreenEnter {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.98);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes candleFlicker {
+
+    0% {
+
+        transform:
+            translateX(-50%)
+            rotate(42deg)
+            scale(0.95);
+
+    }
+
+    100% {
+
+        transform:
+            translateX(-50%)
+            rotate(48deg)
+            scale(1.08);
+
+    }
+
+}
+
+
+@keyframes wishFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px)
+            scale(1.05);
+
+    }
+
+}
+
+
+@keyframes flameReady {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-7px)
+            scale(1.08);
+
+    }
+
+}
+
+
+@keyframes finalHeartBeat {
+
+    0%,
+    100% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.12);
+
+    }
+
+}
+
+
+@keyframes closingHeart {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1)
+            rotate(0deg);
+
+    }
+
+    25% {
+
+        transform:
+            scale(1.08)
+            rotate(-4deg);
+
+    }
+
+    75% {
+
+        transform:
+            scale(1.08)
+            rotate(4deg);
+
+    }
+
+}
+
+
+@keyframes starsGlow {
+
+    0%,
+    100% {
+
+        opacity: 0.55;
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform: scale(1.08);
+
+    }
+
+}
+
+
+@keyframes finalParticleFloat {
+
+    0% {
+
+        transform:
+            translateY(105vh)
+            rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+    10% {
+
+        opacity: 0.6;
+
+    }
+
+    90% {
+
+        opacity: 0.4;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-120px)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+.final-cake-celebration {
+
+    animation:
+        cakeCelebrate
+        0.9s
+        ease
+        both;
+}
+
+
+@keyframes cakeCelebrate {
+
+    0% {
+
+        transform:
+            scale(1);
+
+    }
+
+    40% {
+
+        transform:
+            scale(1.08)
+            rotate(-1deg);
+
+    }
+
+    70% {
+
+        transform:
+            scale(1.04)
+            rotate(1deg);
+
+    }
+
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+.candle-blown .flame {
+
+    animation: none;
+
+    opacity: 0;
+
+    transform:
+        translateX(-50%)
+        scale(0);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.final-celebration-active {
+
+    animation:
+        finalCelebration
+        1.5s
+        ease
+        both;
+}
+
+
+@keyframes finalCelebration {
+
+    0% {
+
+        opacity: 0;
+
+        transform: scale(0.9);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform: scale(1.05);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
